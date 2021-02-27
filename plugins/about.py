@@ -1,7 +1,5 @@
 from script import script
 
-from pyrogram import Client, filters
-
 @Client.on_message(filters.command(["about"]))
 def about(bot, update):
 
