@@ -8,7 +8,7 @@ elif query.data == "help_data":
             ]
         )
         await query.message.edit_text(
-            script.HELP_MSG, reply_markup=keyboard, disable_web_page_preview=True
+            help.helptxt, reply_markup=keyboard, disable_web_page_preview=True
         )
 elif query.data == "about_data":
         keyboard = InlineKeyboardMarkup(
