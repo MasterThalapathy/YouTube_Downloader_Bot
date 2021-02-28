@@ -13,12 +13,10 @@ from script import script
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("BACK", callback_data="help_data"),
+                        InlineKeyboardButton('Developer', url='https://t.me/Amani_m_h_d'),
                     ],
                 
                 ]
             ),
-            reply_to_message_id=message.message_id,
-        )
-    except Exception:
-        pass
+            quote=True
+    )
