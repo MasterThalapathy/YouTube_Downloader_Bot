@@ -7,6 +7,13 @@ async def about(client, message):
     joinButton = InlineKeyboardMarkup([
         [InlineKeyboardButton("⚙ Developer ⚙", url="https://t.me/Amani_m_h_d")],
     ])
-    abouttxt = f"<b>Hai, Follow these Steps..</b> \n\n➠ Send Me Your Youtube Link And Select Desired Option To Be Uploaded To Telegram \n\n➠ Currently Only Supports Youtube Single  (No playlist) Just Send Any Youtube Link \n\n<b>📜Quote : </b><code>കിടന്ന് അടി വയ്ക്കരുത് എല്ലാർക്കും ഉപയോഗിക്കാൻ പറ്റും😌</code>"
+    abouttxt = f"➠<b>My Name :</b> <code>Youtube Downloader🤓</code>
+➠<b>Dev :</b> <a href='https://t.me/Amani_m_h_d'>Amani Muhammed</a>
+➠<b>Credits :</b> <code>Everyone in this journey</code>
+➠<b>Language :</b> <code>Python3</code>
+➠<b>Library :</b> <a href='https://docs.pyrogram.org/'>Pyrogram 1.0.7</a> 
+➠<b>Server :</b> <a href='https://herokuapp.com/'>Heroku</a>
+➠<b>Source Code :</b> 👉 <a href='http://t.me/nokkiirunnoippokittum'>Click Here</a> 
+       <b>📜Quote :</b> <code>ആരും പേടിക്കണ്ട എല്ലാവർക്കും കിട്ടും™️</code>"
     await message.reply_text(abouttxt, reply_markup=joinButton)
     raise StopPropagation
