@@ -1,22 +1,12 @@
-By #masterThalapathy
-from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
-from pyrogram import Client, filters
-from script import script  
+from pyrogram import Client, Filters, StopPropagation, InlineKeyboardButton, InlineKeyboardMarkup
 
-@Client.on_message(filters.command(["about"]) & filters.private)
- async def about(client, message):
 
-    try:
-        await message.reply_text(
-            text=script.ABOUT_MSG,
-            disable_web_page_preview=True,
-            reply_markup=InlineKeyboardMarkup(
-                [
-                    [
-                        InlineKeyboardButton('Developer', url='https://t.me/Amani_m_h_d'),
-                    ],
-                
-                ]
-            ),
-            quote=True
-    )
+@Client.on_message(Filters.command(["about"]),group=-2)
+async def help(client, message):
+    # return
+    joinButton = InlineKeyboardMarkup([
+        [InlineKeyboardButton("⚙ Developer ⚙", url="https://t.me/Amani_m_h_d")],
+    ])
+    abouttxt = f"<b>Hai, Follow these Steps..</b> \n\n➠ Send Me Your Youtube Link And Select Desired Option To Be Uploaded To Telegram \n\n➠ Currently Only Supports Youtube Single  (No playlist) Just Send Any Youtube Link \n\n<b>📜Quote : </b><code>കിടന്ന് അടി വയ്ക്കരുത് എല്ലാർക്കും ഉപയോഗിക്കാൻ പറ്റും😌</code>"
+    await message.reply_text(abouttxt, reply_markup=joinButton)
+    raise StopPropagation
